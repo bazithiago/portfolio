@@ -11,19 +11,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-    /* --primary: #50c751;
-    --primary-hover: #5fe660;
-    --grey-one: #0C0E25;
-    --grey-two: #90939A;
-    --grey-three: #BFC0C2;
-    --grey-four: #ebebec;
-    --white: #FFFFFF;
-    --background: #F5F6FA;
-    --red-alert: #E3324C;
-    --yellow-attention: #FB9F36;
-    --blue-one: #4978d3;
-    --blue-two: #4b8ddd;
-    --blue-three: #b6d3f6; */
+    --primary: #000000;
+    --secondary: #ffffff;
+
     }
 
 
