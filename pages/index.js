@@ -1,4 +1,4 @@
-import Soon from '../src/Soon'
+import Soon from '../src/Components/Soon'
 import Head from 'next/head';
 
 

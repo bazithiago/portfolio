@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Button from '../Button';
 import Div100vh from 'react-div-100vh'
-import Github from '../img/Github.svg'
-import Linkedin from '../img/Linkedin.svg'
+import Button from '../Button'
+import Github from '../../images/Github.svg'
+import Linkedin from '../../images/Linkedin.svg'
 
 const SoonStyles = styled.div`
     width: 100vw;
