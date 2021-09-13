@@ -69,7 +69,7 @@ const Soon = () => {
         <Div100vh>
         <SoonStyles>
             <span>{`Hi, I'm Thiago`}</span>
-            <h1>{`While I'm designing a new portfolio`}</h1>
+            <h1>{`While I'm coding a new portfolio`}</h1>
             <h2>take a look at my social networks</h2>
 
             <div>
