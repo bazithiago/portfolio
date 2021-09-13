@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import Image from 'next/image'
 
 const ButtonStyles = styled.a`
     min-width: 145px;
@@ -16,11 +17,17 @@ const ButtonStyles = styled.a`
         background-color: var(--primary);
         transition: all 0.3s ease-in-out;
     }
+
+    & > p {
+        margin-left: 10px;
+    }
 `
 
-const Button = ({ children, href, target }) => {
+const Button = ({ children, href, target, socialMedia, src }) => {
     return(
         <ButtonStyles href={href} target={target}>
+            <Image alt='socialMedia' src={src} />
+            <p>{socialMedia}</p>
             {children}
         </ButtonStyles>
     )

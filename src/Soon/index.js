@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Button from '../Button';
 import Div100vh from 'react-div-100vh'
+import Github from '../img/Github.svg'
+import Linkedin from '../img/Linkedin.svg'
 
 const SoonStyles = styled.div`
     width: 100vw;
@@ -71,8 +73,8 @@ const Soon = () => {
             <h2>take a look at my social networks</h2>
 
             <div>
-                <Button href='https://github.com/bazithiago' target='_blank' >Github</Button>
-                <Button href='https://www.linkedin.com/in/vieirathiago/' target='_blank' >Linkedin</Button>
+                <Button socialMedia='Github' src={Github} href='https://github.com/bazithiago' target='_blank' /> 
+                <Button socialMedia='Linkedin' src={Linkedin} href='https://www.linkedin.com/in/vieirathiago/' target='_blank' /> 
             </div>
 
             <span>or write me</span>
