@@ -30,7 +30,7 @@ const SoonStyles = styled.div`
     div {
         margin: 55px 0 30px 0;
 
-        & > button + button {
+        & > a + a {
             margin-top: 10px;
             }
         
@@ -38,7 +38,7 @@ const SoonStyles = styled.div`
             display: flex;
             margin: 55px 0 30px 0;
 
-            & > button + button {
+            & > a + a {
                 margin-top: 0px;
                 margin-left: 20px;
             }
@@ -46,11 +46,12 @@ const SoonStyles = styled.div`
 
     }
 
-    a {
+    & > a {
         font-size: 1.45rem;
         font-weight: 500;
         transition: all 0.3s ease-in-out;
         overflow-wrap: break-word;
+        width: fit-content;
 
         :hover {
             background-color: var(--primary);
@@ -65,13 +66,13 @@ const Soon = () => {
     return(
         <Div100vh>
         <SoonStyles>
-            <span>{`<Hi, I'm Thiago />`}</span>
-            <h1>While Im designing a new portfolio</h1>
+            <span>{`Hi, I'm Thiago`}</span>
+            <h1>{`While I'm designing a new portfolio`}</h1>
             <h2>take a look at my social networks</h2>
 
             <div>
-                <Button>Github</Button>
-                <Button>Linkedin</Button>
+                <Button href='https://github.com/bazithiago' target='_blank' >Github</Button>
+                <Button href='https://www.linkedin.com/in/vieirathiago/' target='_blank' >Linkedin</Button>
             </div>
 
             <span>or write me</span>

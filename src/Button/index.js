@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyles = styled.button`
+const ButtonStyles = styled.a`
     min-width: 145px;
     height: 40px;
     display: flex;
@@ -18,9 +18,9 @@ const ButtonStyles = styled.button`
     }
 `
 
-const Button = ({ children }) => {
+const Button = ({ children, href, target }) => {
     return(
-        <ButtonStyles>
+        <ButtonStyles href={href} target={target}>
             {children}
         </ButtonStyles>
     )
