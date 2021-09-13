@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
+import Database from '../../Database';
+import Image from 'next/image'
+
 import Button from '../Button'
 import Github from '../../images/Github.svg'
 import Linkedin from '../../images/Linkedin.svg'
@@ -29,7 +32,7 @@ const SoonStyles = styled.div`
         line-height: 98%;
     }
 
-    div {
+    & > div {
         margin: 55px 0 30px 0;
 
         & > a + a {
@@ -60,6 +63,29 @@ const SoonStyles = styled.div`
             color: var(--secondary);
             transition: all 0.3s ease-in-out;
             width: fit-content;
+
+            img {
+                fill: red;
+            }
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 15px;
+        font-size: 0.7rem;
+
+        & > div {
+            margin: 10px 0 30px 0;
+            height: 30px;
+
+            & > div + div {
+                margin-left: 10px !important;
+            }
+
+            img {
+                width: 24px;
+            }
         }
     }
 `
@@ -79,6 +105,17 @@ const Soon = () => {
 
             <span>or write me</span>
             <a href="mailto:thiagovieira.dev@gmail.com" rel="noreferrer" target="_blank">thiagovieira.dev@gmail.com</a>
+
+            <footer>
+                <p>made with</p>
+                <div>
+                    {Database.technologies.map( (tech) => {
+                        return (
+                            <Image key={tech.name} alt={tech.name} src={require(`../../images/${tech.logo}.svg`)} />
+                        )
+                    } )}
+                </div>
+            </footer>
 
         </SoonStyles>
         </Div100vh>
