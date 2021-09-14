@@ -10,7 +10,7 @@ const SoonStyles = styled.div`
     width: 100vw;
     height: 100%;
     border: 15px solid var(--primary);
-    padding: 35px 35px 80px 35px;
+    padding: 35px 35px 90px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +79,7 @@ const SoonStyles = styled.div`
         & > div {
             display: flex;
             flex-direction: row;
-            margin: 10px 0 30px 0;
+            margin: 10px 0 20px 0;
         }
     }
 `
