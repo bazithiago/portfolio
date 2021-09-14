@@ -18,16 +18,24 @@ const Database = {
     technologies: 
         [
             {
-                name: 'react',
+                name: 'React',
                 src: '/react.svg'
-            },
-            {
-                name: 'next.js',
-                src: '/nextjs.svg'
             },
             {
                 name: 'styled-components',
                 src: '/styledcomponents.svg'
+            },
+            {
+                name: 'Next.js',
+                src: '/nextjs.svg'
+            },
+            {
+                name: 'Vercel',
+                src: '/logo-vercel.svg'
+            },
+            {
+                name: 'Figma',
+                src: '/figma.svg'
             },
         ]
 }

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
-import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
+import Div100vh from 'react-div-100vh'
+
+
 import Database from '../../Database/index';
 import Button from '../Button'
-
 
 const SoonStyles = styled.div`
     width: 100vw;
     height: 100%;
     border: 15px solid var(--primary);
-    padding: 35px;
+    padding: 35px 35px 80px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,13 +101,13 @@ const Soon = () => {
                 {Database.socialMedias.map( socialMedia => {
                     return(
                         <Button 
-                            key={socialMedia.name} 
+                            key={socialMedia.name}
                             alt={socialMedia.name}
                             name={socialMedia.name}
                             src={socialMedia.src} 
                             href={socialMedia.href} 
                             target={socialMedia.target} 
-                        />                       
+                        />
                     ) 
                 })}
                  
@@ -116,7 +117,7 @@ const Soon = () => {
             <a href="mailto:thiagovieira.dev@gmail.com" rel="noreferrer" target="_blank">thiagovieira.dev@gmail.com</a>
 
             <footer>
-                <p>made with</p>
+                <p>build with</p>
                 <div>
                    {Database.technologies.map( tech => {
                        return(
@@ -126,6 +127,8 @@ const Soon = () => {
                                 src={tech.src}
                                 width={16}
                                 height={16}
+                                aria-label="Tooltip message" 
+                                data-cooltipz-dir="top"
                             />
                        )
                    })}
