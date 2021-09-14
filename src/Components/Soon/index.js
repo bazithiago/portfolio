@@ -70,17 +70,16 @@ const SoonStyles = styled.div`
     }
 
     footer {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         bottom: 15px;
         font-size: 0.7rem;
 
         & > div {
+            display: flex;
+            flex-direction: row;
             margin: 10px 0 30px 0;
-            height: 30px;
-
-            & > div + div {
-                margin-left: 13px !important;
-            }
         }
     }
 `
@@ -115,16 +114,16 @@ const Soon = () => {
             <footer>
                 <p>build with</p>
                 <div>
-                   {Database.technologies.map( tech => {
-                       return(
-                            <TechIcon 
-                                key={tech.name}
-                                alt={tech.name}
-                                src={tech.src}
-                                size={22}
-                            />
-                       )
-                   })}
+                    {Database.technologies.map( tech => {
+                        return(
+                                <TechIcon 
+                                    key={tech.name}
+                                    alt={tech.name}
+                                    src={tech.src}
+                                    size={22}
+                                />
+                        )
+                    })}
                 </div>
             </footer>
 
