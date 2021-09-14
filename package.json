@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "babel-plugin-styled-components": "^1.13.2",
-    "next": "11.1.2",
+    "cooltipz-css": "^1.6.8",
+    "next": "^11.1.2",
     "next-images": "^1.8.1",
     "react": "17.0.2",
     "react-div-100vh": "^0.6.0",

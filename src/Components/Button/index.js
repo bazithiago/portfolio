@@ -23,11 +23,11 @@ const ButtonStyles = styled.a`
     }
 `
 
-const Button = ({ children, href, target, socialMedia, src }) => {
+const Button = ({ children, href, target, name, src }) => {
     return(
         <ButtonStyles href={href} target={target}>
-            <Image alt='socialMedia' src={src} />
-            <p>{socialMedia}</p>
+            <Image alt={name} src={src} width={24} height={24}/>
+            <p>{name}</p>
             {children}
         </ButtonStyles>
     )

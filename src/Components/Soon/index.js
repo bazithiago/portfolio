@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
-import Database from '../../Database';
 import Image from 'next/image'
-
+import Database from '../../Database/index';
 import Button from '../Button'
-import Github from '../../images/Github.svg'
-import Linkedin from '../../images/Linkedin.svg'
+
 
 const SoonStyles = styled.div`
     width: 100vw;
@@ -99,8 +97,19 @@ const Soon = () => {
             <h2>take a look at my social networks</h2>
 
             <div>
-                <Button socialMedia='Github' src={Github} href='https://github.com/bazithiago' target='_blank' /> 
-                <Button socialMedia='Linkedin' src={Linkedin} href='https://www.linkedin.com/in/vieirathiago/' target='_blank' /> 
+                {Database.socialMedias.map( socialMedia => {
+                    return(
+                        <Button 
+                            key={socialMedia.name} 
+                            alt={socialMedia.name}
+                            name={socialMedia.name}
+                            src={socialMedia.src} 
+                            href={socialMedia.href} 
+                            target={socialMedia.target} 
+                        />                       
+                    ) 
+                })}
+                 
             </div>
 
             <span>or write me</span>
@@ -109,11 +118,17 @@ const Soon = () => {
             <footer>
                 <p>made with</p>
                 <div>
-                    {Database.technologies.map( (tech) => {
-                        return (
-                            <Image key={tech.name} alt={tech.name} src={require(`../../images/${tech.logo}.svg`)} />
-                        )
-                    } )}
+                   {Database.technologies.map( tech => {
+                       return(
+                            <Image 
+                                key={tech.name}
+                                alt={tech.name}
+                                src={tech.src}
+                                width={16}
+                                height={16}
+                            />
+                       )
+                   })}
                 </div>
             </footer>
 
