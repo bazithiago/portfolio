@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import Image from 'next/image'
 import Div100vh from 'react-div-100vh'
 
-
 import Database from '../../Database/index';
 import Button from '../Button'
+import TechIcon from '../TechIcon'
 
 const SoonStyles = styled.div`
     width: 100vw;
@@ -79,11 +79,7 @@ const SoonStyles = styled.div`
             height: 30px;
 
             & > div + div {
-                margin-left: 10px !important;
-            }
-
-            img {
-                width: 24px;
+                margin-left: 13px !important;
             }
         }
     }
@@ -121,14 +117,11 @@ const Soon = () => {
                 <div>
                    {Database.technologies.map( tech => {
                        return(
-                            <Image 
+                            <TechIcon 
                                 key={tech.name}
                                 alt={tech.name}
                                 src={tech.src}
-                                width={16}
-                                height={16}
-                                aria-label="Tooltip message" 
-                                data-cooltipz-dir="top"
+                                size={22}
                             />
                        )
                    })}
