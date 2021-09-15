@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import Image from 'next/image'
 import Div100vh from 'react-div-100vh'
 
 import Database from '../../Database/index';
-import Button from '../Button'
-import TechIcon from '../TechIcon'
+import Button from '../Button';
+import TechIcon from '../TechIcon';
 
 const SoonStyles = styled.div`
     width: 100vw;
@@ -14,6 +13,7 @@ const SoonStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 
     span {
         color: var(--primary);
@@ -116,12 +116,12 @@ const Soon = () => {
                 <div>
                     {Database.technologies.map( tech => {
                         return(
-                                <TechIcon 
-                                    key={tech.name}
-                                    alt={tech.name}
-                                    src={tech.src}
-                                    size={22}
-                                />
+                            <TechIcon 
+                                key={tech.name}
+                                alt={tech.name}
+                                src={tech.src}
+                                size={22}
+                            />
                         )
                     })}
                 </div>
