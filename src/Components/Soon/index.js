@@ -3,7 +3,7 @@ import Div100vh from 'react-div-100vh'
 
 import Database from '../../Database/index';
 import Button from '../Button';
-import TechIcon from '../TechIcon';
+import TechGroup from '../TechGroup';
 
 const SoonStyles = styled.div`
     width: 100vw;
@@ -70,17 +70,8 @@ const SoonStyles = styled.div`
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
         position: absolute;
         bottom: 15px;
-        font-size: 0.7rem;
-
-        & > div {
-            display: flex;
-            flex-direction: row;
-            margin: 10px 0 20px 0;
-        }
     }
 `
 
@@ -112,19 +103,7 @@ const Soon = () => {
             <a href="mailto:thiagovieira.dev@gmail.com" rel="noreferrer" target="_blank">thiagovieira.dev@gmail.com</a>
 
             <footer>
-                <p>build with</p>
-                <div>
-                    {Database.technologies.map( tech => {
-                        return(
-                            <TechIcon 
-                                key={tech.name}
-                                alt={tech.name}
-                                src={tech.src}
-                                size={22}
-                            />
-                        )
-                    })}
-                </div>
+                <TechGroup data={Database.technologies} />
             </footer>
 
         </SoonStyles>
