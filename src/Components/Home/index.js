@@ -3,7 +3,6 @@ import Div100vh from 'react-div-100vh'
 import Project from '../Project';
 import ProjectsDatabase from '../../Database/projects';
 
-
 const HomeStyles = styled.div`
     width: 100vw;
     height: 100%;
@@ -11,15 +10,21 @@ const HomeStyles = styled.div`
     padding: 35px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    overflow: scroll;
     
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
 `
 
 const Soon = () => {
     return(
         <Div100vh>
         <HomeStyles>
-            
             {ProjectsDatabase.map( project => {
                 return(
                     <Project 
@@ -27,7 +32,6 @@ const Soon = () => {
                         project={project}/>
                 )
             })}
-
         </HomeStyles>
         </Div100vh>
     );

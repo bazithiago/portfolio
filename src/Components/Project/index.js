@@ -5,7 +5,9 @@ import Image from 'next/image'
 
 const ProjectStyles = styled.div`
     display: flex;
+    max-width: 500px;
     flex-direction: column;
+    margin-bottom: 150px;
        
     h3 {
         font-weight: 400;
