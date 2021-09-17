@@ -1,44 +1,46 @@
 const ProjectsDatabase = [
     {
         title: 'project title',
-        description: 'description example',
+        description: 'brief description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et metus justo.',
+        image: '/photos/mockup.jpeg',
         technologies: [
             {
                 name: 'React',
-                src: '/react.svg'
+                src: '/logos/react.svg'
             },
             {
                 name: 'styled-components',
-                src: '/styledcomponents.svg'
+                src: '/logos/styledcomponents.svg'
             },
             {
                 name: 'Next.js',
-                src: '/nextjs.svg'
+                src: '/logos/nextjs.svg'
             },
             {
                 name: 'Vercel',
-                src: '/logo-vercel.svg'
+                src: '/logos/logo-vercel.svg'
             },
             {
                 name: 'Figma',
-                src: '/figma.svg'
+                src: '/logos/figma.svg'
             },
         ],
         links: [
             {
                 name: 'Github',
-                src: '/github.svg',
+                src: '/logos/github.svg',
                 href: '',
                 target: '_blank'
             },
             {
                 name: 'View live',
-                src: '/github.svg',
+                src: '/logos/live.svg',
                 href: '',
                 target: '_blank'
             }
         ],
     },
+    
 ]
 
 export default ProjectsDatabase;

@@ -1,30 +1,65 @@
 import styled from 'styled-components';
-import ProjectsDatabase from '../../Database/projects';
 import TechGroup from '../TechGroup';
-import TechIcon from '../TechIcon';
+import Button from '../Button'
+import Image from 'next/image'
 
 const ProjectStyles = styled.div`
     display: flex;
     flex-direction: column;
-
+       
+    h3 {
+        font-weight: 400;
+        margin: 5px 0 20px 0;
+    }
+    
+    & > div > :nth-child(5)  {
+        display: flex;
+        margin-top: 15px;
+                
+        & > a + a {
+            margin-left: 20px;
+        }
+    }
+    
 `
 
-const Project = () => {
+const Project = ({ data }) => {
     return(
         <ProjectStyles>
-        
-            {ProjectsDatabase.map( project => {
+            {data.map( project => {
                 return(
                     <div key={project.title}>
+                        <Image 
+                            alt={project.title}
+                            src={project.image}
+                            width={1300}
+                            height={750}
+                            layout='responsive'
+                        />
                         <h1>{project.title}</h1>
-                        <p>{project.description}</p>
+                        <h3>{project.description}</h3>
 
                         <TechGroup data={project.technologies} />
-                       
+
+                        <div>
+                            {project.links.map( socialMedia => {
+                                return(
+                                    <Button 
+                                        key={socialMedia.name}
+                                        alt={socialMedia.name}
+                                        name={socialMedia.name}
+                                        src={socialMedia.src} 
+                                        href={socialMedia.href} 
+                                        target={socialMedia.target} 
+                                    />
+                                ) 
+                            })}
+                        </div>
                     </div>
                 );
             } )}
-
+            
+                 
         </ProjectStyles>
     )
 }

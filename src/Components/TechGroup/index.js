@@ -6,7 +6,7 @@ const TechGroupStyles = styled.div`
     flex-direction: column;
     font-size: 0.7rem;
 
-    & > div {
+    & > div { // icons row
         display: flex;
         flex-direction: row;
         margin: 10px 0 20px 0;

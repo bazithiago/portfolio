@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
 import Project from '../Project';
+import ProjectsDatabase from '../../Database/projects';
+
 
 const HomeStyles = styled.div`
     width: 100vw;
@@ -18,7 +20,7 @@ const Soon = () => {
         <Div100vh>
         <HomeStyles>
             
-            <Project />
+            <Project data={ProjectsDatabase}/>
 
         </HomeStyles>
         </Div100vh>
