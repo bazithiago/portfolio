@@ -22,6 +22,18 @@ const ProjectStyles = styled.div`
             margin-left: 20px;
         }
     }
+
+    @media screen and (min-width: 1024px) {
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+    }
     
 `
 
