@@ -20,7 +20,13 @@ const Soon = () => {
         <Div100vh>
         <HomeStyles>
             
-            <Project data={ProjectsDatabase}/>
+            {ProjectsDatabase.map( project => {
+                return(
+                    <Project 
+                        key={project.title}    
+                        project={project}/>
+                )
+            })}
 
         </HomeStyles>
         </Div100vh>

@@ -23,41 +23,38 @@ const ProjectStyles = styled.div`
     
 `
 
-const Project = ({ data }) => {
+const Project = ({ project }) => {
     return(
         <ProjectStyles>
-            {data.map( project => {
-                return(
-                    <div key={project.title}>
-                        <Image 
-                            alt={project.title}
-                            src={project.image}
-                            width={1300}
-                            height={750}
-                            layout='responsive'
-                        />
-                        <h1>{project.title}</h1>
-                        <h3>{project.description}</h3>
+            <div key={project.title}>
+                <Image 
+                    alt={project.title}
+                    src={project.image}
+                    width={350}
+                    height={150}
+                    layout='fixed'
+                />
+                <h1>{project.title}</h1>
+                <h3>{project.description}</h3>
 
-                        <TechGroup data={project.technologies} />
+                <TechGroup data={project.technologies} />
 
-                        <div>
-                            {project.links.map( socialMedia => {
-                                return(
-                                    <Button 
-                                        key={socialMedia.name}
-                                        alt={socialMedia.name}
-                                        name={socialMedia.name}
-                                        src={socialMedia.src} 
-                                        href={socialMedia.href} 
-                                        target={socialMedia.target} 
-                                    />
-                                ) 
-                            })}
-                        </div>
-                    </div>
-                );
-            } )}
+                <div>
+                    {project.links.map( socialMedia => {
+                        return(
+                            <Button 
+                                key={socialMedia.name}
+                                alt={socialMedia.name}
+                                name={socialMedia.name}
+                                src={socialMedia.src} 
+                                href={socialMedia.href} 
+                                target={socialMedia.target} 
+                            />
+                        ) 
+                    })}
+                </div>
+            </div>
+             
             
                  
         </ProjectStyles>
