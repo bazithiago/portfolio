@@ -21,7 +21,7 @@ const HomeStyles = styled.div`
 
 `
 
-const Soon = () => {
+const Home = () => {
     return(
         <Div100vh>
         <HomeStyles>
@@ -32,10 +32,20 @@ const Soon = () => {
                         project={project}/>
                 )
             })}
+            {/* <ParallaxComponent
+                speed="0.003"
+                width="300"
+                top="40%"
+                left="100"
+                >
+                <div>
+                    Children component
+                </div>
+            </ParallaxComponent> */}
         </HomeStyles>
         </Div100vh>
     );
 }
 
 
-export default Soon;
+export default Home;
