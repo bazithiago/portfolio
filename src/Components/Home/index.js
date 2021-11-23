@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
+import HamburgerMenu from '../HamburgerMenu'
 import Project from '../Project';
 import ProjectsDatabase from '../../Database/projects';
+
 
 const HomeStyles = styled.div`
     width: 100vw;
@@ -25,23 +27,14 @@ const Home = () => {
     return(
         <Div100vh>
         <HomeStyles>
-            {ProjectsDatabase.map( project => {
+            <HamburgerMenu />
+            {/* {ProjectsDatabase.map( project => {
                 return(
                     <Project 
                         key={project.title}    
                         project={project}/>
                 )
-            })}
-            {/* <ParallaxComponent
-                speed="0.003"
-                width="300"
-                top="40%"
-                left="100"
-                >
-                <div>
-                    Children component
-                </div>
-            </ParallaxComponent> */}
+            })} */}
         </HomeStyles>
         </Div100vh>
     );
