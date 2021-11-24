@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
-import HamburgerMenu from '../HamburgerMenu'
-import Project from '../Project';
-import ProjectsDatabase from '../../Database/projects';
+import Navbar from '../navbar/Navbar'
+// import Project from '../Project';
+// import ProjectsDatabase from '../../Database/projects';
 
 
 const HomeStyles = styled.div`
@@ -27,7 +27,7 @@ const Home = () => {
     return(
         <Div100vh>
         <HomeStyles>
-            <HamburgerMenu />
+            <Navbar />
             {/* {ProjectsDatabase.map( project => {
                 return(
                     <Project 

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Div100vh from 'react-div-100vh'
 
 import Database from '../../Database/index';
-import Button from '../Button';
-import TechGroup from '../TechGroup';
+import Button from '../assets/buttons/PrimaryButton';
+import TechGroup from '../assets/technologies/TechGroup.jsx';
 
 const SoonStyles = styled.div`
     width: 100vw;

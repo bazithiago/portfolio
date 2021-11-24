@@ -21,15 +21,17 @@ const NavBackground = styled.div`
     transition: transform 0.8s ease-in-out;
     width: 20px;
     height: 20px;
+    z-index: 9;
 `
 
 const Navbar = styled.nav`
+    position: relative;
     height: 100vh;
-    display: flex;
+    display: ${(props) => (props.clicked ? "flex" : "none")};
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9;
+    z-index: 10;
     width: ${(props) => (props.clicked ? "100%" : "0")};
     opacity: ${(props) => (props.clicked ? "1" : "0")};
     transition: all 1s;
@@ -62,7 +64,7 @@ const Navbar = styled.nav`
 `;
 
 
-function HamburgerMenu() {
+function Menu() {
     const ptbr = nav.ptbr;
     const en = nav.en;
     const [lang, setLang] = useState(ptbr)
@@ -72,20 +74,19 @@ function HamburgerMenu() {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
-
+    console.log(click);
     return (
         <>
             <MenuStyle onClick={handleClick}>
                 <MenuIcon />
             </MenuStyle>
-            <NavBackground clicked={click}>&nbsp;</NavBackground>
             <Navbar clicked={click}>
                 <ul>
                     {lang.navbar.map( li  => {
                         return (
                             <li key={li.title}><a href={li.href} onClick={handleClick}>{li.title} </a></li>
-                        )
-                    })}
+                            )
+                        })}
                 </ul>
                 <div>
                     <p><strong>{lang.language}</strong></p>
@@ -93,8 +94,9 @@ function HamburgerMenu() {
                     <a onClick={setEN}>english</a>
                 </div>
             </Navbar>
+            <NavBackground clicked={click} onClick={handleClick}>&nbsp;</NavBackground>
         </>
     )
 }
 
-export default HamburgerMenu;
+export default Menu;

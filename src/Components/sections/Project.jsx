@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import TechGroup from '../TechGroup';
+import TechGroup from '../TechGroup/TechGroup';
 import Button from '../Button'
 import Image from 'next/image'
 

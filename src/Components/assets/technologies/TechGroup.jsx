@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import TechIcon from '../TechIcon';
+import TechIcon from './TechIcon';
 
 const TechGroupStyles = styled.div`
     display: flex;
